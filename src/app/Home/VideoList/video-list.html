@@ -1,1 +1,26 @@
-<p>video-list works!</p>
+<div id="content">
+    <h1>Video list</h1>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Duration</th>
+            <th>Size</th>
+            <th>Video quality</th>
+            <th>Encoders</th>
+        </tr>
+        <tr *ngFor="let video of videos">
+            <td>{{ video.id }}</td>
+            <td>{{ video.name }}</td>
+            <td>{{ video.duration }}</td>
+            <td>{{ video.size }}</td>
+            <td>{{ video.videoQuality }}</td>
+            <td>
+                <select name="encoders">
+                    <option></option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</div>
